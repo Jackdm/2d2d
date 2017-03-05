@@ -19,14 +19,19 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonToPress: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var topConstraint: NSLayoutConstraint!
+    @IBOutlet weak var leftConstraint: NSLayoutConstraint!
     var timeLeft = 3
     var miliTime = 0
     var myTimer : Timer!
     var pressedTimer : Timer!
     var reactionTimes = [0, 0, 0, 0, 0]
+    var newButtonX: CGFloat?
+    var newButtonY: CGFloat?
     
     //functions
     override func viewDidLoad() {
+        buttonToPress.isHidden = true
         numberLabel.text = "3"
         super.viewDidLoad()
         myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameViewController.countUp), userInfo: nil, repeats: true)
@@ -41,11 +46,13 @@ class GameViewController: UIViewController {
         if timeLeft == 0 {
             myTimer.invalidate()
             randomButton()
+            numberLabel.text = ""
         }
         
     }
     
     func randomButton() {
+        buttonToPress.isHidden = false
         moveButton(button: buttonToPress)
         pressedTimer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { _ in
             self.miliTime += 1
@@ -53,6 +60,7 @@ class GameViewController: UIViewController {
             if self.buttonToPress.isTouchInside {
                 self.reactionTimes[0] = self.miliTime
                 self.pressedTimer.invalidate()
+                //self.miliTime = 0
             }
         }
     }
@@ -75,9 +83,13 @@ class GameViewController: UIViewController {
         let yoffset = CGFloat(arc4random_uniform(UInt32(yheight)))
         
         // Offset the button's center by the random offsets.
-        button.center.x = xoffset + buttonWidth / 2
-        button.center.y = yoffset + buttonHeight / 2
+        leftConstraint.constant = xoffset + buttonWidth / 2
+        topConstraint.constant = yoffset + buttonHeight / 2
     }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
