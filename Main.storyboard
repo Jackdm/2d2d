@@ -68,7 +68,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_Drunk2Drive" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -77,12 +77,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dre-zQ-1Tj" customClass="Label">
-                                <rect key="frame" x="201" y="396" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-ip-I1M">
                                 <rect key="frame" x="42" y="306" width="290" height="90"/>
                                 <constraints>
@@ -130,7 +124,6 @@
                         <color key="backgroundColor" red="0.0" green="0.24962079524993896" blue="0.55227231979370117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iTo-1a-veM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="2zx-0E-89H"/>
-                            <constraint firstAttribute="trailing" secondItem="Dre-zQ-1Tj" secondAttribute="trailing" constant="174" id="3Gj-zq-8TV"/>
                             <constraint firstItem="Rbe-YE-3jB" firstAttribute="leading" secondItem="mjM-ip-I1M" secondAttribute="leading" id="62P-jP-ypy"/>
                             <constraint firstItem="mjM-ip-I1M" firstAttribute="centerX" secondItem="iTo-1a-veM" secondAttribute="centerX" id="AQI-Ud-Vnh"/>
                             <constraint firstItem="mjM-ip-I1M" firstAttribute="top" secondItem="Rbe-YE-3jB" secondAttribute="bottom" constant="57" id="Akz-Zt-Hhh"/>
@@ -139,7 +132,6 @@
                             <constraint firstItem="4WF-Dq-hxE" firstAttribute="top" secondItem="mjM-ip-I1M" secondAttribute="bottom" constant="51" id="ZUD-eX-aEQ"/>
                             <constraint firstItem="mjM-ip-I1M" firstAttribute="centerX" secondItem="4WF-Dq-hxE" secondAttribute="centerX" id="cUO-wL-uuh"/>
                             <constraint firstItem="Rbe-YE-3jB" firstAttribute="trailing" secondItem="mjM-ip-I1M" secondAttribute="trailing" id="deO-4k-dOG"/>
-                            <constraint firstItem="mjM-ip-I1M" firstAttribute="bottom" secondItem="Dre-zQ-1Tj" secondAttribute="bottom" id="iEQ-Bf-rIy"/>
                             <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="centerX" secondItem="Rbe-YE-3jB" secondAttribute="centerX" id="jWp-fg-FiH"/>
                             <constraint firstItem="4WF-Dq-hxE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="kpn-Oy-zzN"/>
                             <constraint firstItem="Rbe-YE-3jB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="nNX-VE-tbI"/>
@@ -150,9 +142,6 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <connections>
-                        <outlet property="Label" destination="Dre-zQ-1Tj" id="Er8-2N-bYF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
