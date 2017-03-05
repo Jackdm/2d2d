@@ -33,7 +33,7 @@ class GameViewController: UIViewController {
     var newButtonY: CGFloat?
     var buttonCount = 0
     
-    var score : Int!
+    var score2 : Int!
     
     //functions
     override func viewDidLoad() {
@@ -42,6 +42,9 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameViewController.countUp), userInfo: nil, repeats: true)
         
+        if score2 == nil {
+            score2 = 0
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -89,14 +92,22 @@ class GameViewController: UIViewController {
         let mean = (reactionTimes[0] + reactionTimes[1] + reactionTimes[2] + reactionTimes[3] + reactionTimes[4]) / 5
         print(mean)
         if (mean > 300) {
-            performSegue(withIdentifier: "veryDrunkSegue", sender: nil)
-            print ("v drunk")
+            score2! += 3
         } else if (mean > 175) {
+            score2! += 1
+        } else {
+            score2! += 0
+        }
+    }
+    
+    func toPages() {
+        print (score2)
+        if score2 > 4 {
+            performSegue(withIdentifier: "veryDrunkSegue", sender: nil)
+        } else if score2 > 1 {
             performSegue(withIdentifier: "ishDrunkSegue", sender: nil)
-            print ("not so drunk")
         } else {
             performSegue(withIdentifier: "notDrunkSegue", sender: nil)
-            print ("not drunk")
         }
     }
     

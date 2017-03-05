@@ -16,7 +16,7 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
     var userInput : String!
     var wrong = 0
     var myTimer : Timer!
-    var time = 5
+    var time = 3
     
 
     var bAlphabet = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"]
@@ -47,14 +47,33 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
     }
     
     func compareToAlphabet() {
-       /* for i in 0...25 {
-            let index = userInput.index(userInput.startIndex, i)
+       for i in 0...25 {
+        if (userInput == nil) {
+            wrong += 26
+        }
+        else if (userInput.characters.count <= i) {
+            wrong += (26 - i)
+        } else {
+            let index = userInput.index(userInput.startIndex, offsetBy: i)
+            print(index)
             let userChar = userInput[index]
             if (bAlphabet[i] != String(userChar)) {
                 wrong += 1
+                }
             }
-        }*/
+        }
+        print(wrong)
         
+    }
+    
+    func judgement() {
+        if wrong > 15 {
+            score = 3
+        } else if wrong > 10 {
+            score = 1
+        } else {
+            score = 0
+        }
     }
     /*
     // MARK: - Navigation
@@ -65,6 +84,16 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "buttonPressSegue" {
+            let nextVC = segue.destination as! GameViewController
+            nextVC.score2 = score
+        }
+    }
+
 
 }
 
