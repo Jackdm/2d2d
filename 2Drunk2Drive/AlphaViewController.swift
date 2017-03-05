@@ -10,26 +10,32 @@ import UIKit
 
 class AlphaViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zyxTextField: UITextField!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
     var score : Int!
     var userInput : String!
     var wrong = 0
-    var myTimer : Timer
-    var time = 30
+    var myTimer : Timer!
+    var time = 5
     
+
     var bAlphabet = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"]
     var userBAlphabet = ["!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        zyxTextField.delegate = self;
+        zyxTextField.delegate = self
+        continueButton.isHidden = true
         // Do any additional setup after loading the view.
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AlphaViewController.countDown), userInfo: nil, repeats: true)
+        myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(AlphaViewController.countDown), userInfo: nil, repeats: true)
     }
     
     func countDown() {
         time -= 1
+        timerLabel.text = "\(String(time))"
         if (time <= 0) {
             myTimer.invalidate()
+            continueButton.isHidden = false
             compareToAlphabet()
         }
     }
@@ -41,13 +47,13 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
     }
     
     func compareToAlphabet() {
-        for i in 0...25 {
-            let index = userInput.index(userInput.startIndex, offsetBy: i)
+       /* for i in 0...25 {
+            let index = userInput.index(userInput.startIndex, i)
             let userChar = userInput[index]
             if (bAlphabet[i] != String(userChar)) {
                 wrong += 1
             }
-        }
+        }*/
         
     }
     /*
