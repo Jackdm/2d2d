@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,40 +29,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2d2dhomepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-Sz-Jhl">
-                                <rect key="frame" x="0.0" y="28" width="375" height="139"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="123"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ineedaride.png" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-Qf-kSa">
+                                <rect key="frame" x="42" y="198" width="290" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="139" id="6KM-GV-w4d"/>
+                                    <constraint firstAttribute="height" constant="87" id="QCV-11-mXh"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-ip-I1M">
-                                <rect key="frame" x="140" y="424" width="95" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-ip-I1M">
+                                <rect key="frame" x="42" y="326" width="290" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="95" id="iXD-fO-8EB"/>
+                                    <constraint firstAttribute="height" constant="90" id="2It-Pd-IaB"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="test.png"/>
                                 <connections>
                                     <segue destination="BAN-PW-jTX" kind="show" id="mro-nd-Y1Z"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ineedaride.png" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-Qf-kSa">
-                                <rect key="frame" x="42" y="198" width="290" height="87"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="87" id="WPe-kS-qEG"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.24962079524993896" blue="0.55227231979370117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0so-zb-phG"/>
-                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="centerX" secondItem="mjM-ip-I1M" secondAttribute="centerX" id="14L-mB-j62"/>
-                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="75k-D4-LlL"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mjM-ip-I1M" secondAttribute="bottom" constant="213" id="9aC-iv-poQ"/>
-                            <constraint firstAttribute="trailing" secondItem="Dre-zQ-1Tj" secondAttribute="trailing" constant="174" id="GH2-Cn-Guv"/>
-                            <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="NGf-Yk-sbO"/>
-                            <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="centerX" secondItem="R4G-Qf-kSa" secondAttribute="centerX" id="T3j-r1-cuO"/>
-                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="top" secondItem="nfQ-Sz-Jhl" secondAttribute="bottom" constant="66" id="gxY-rt-v0M"/>
-                            <constraint firstAttribute="bottom" secondItem="Dre-zQ-1Tj" secondAttribute="bottom" constant="271" id="mKX-ue-6iP"/>
-                            <constraint firstAttribute="trailing" secondItem="nfQ-Sz-Jhl" secondAttribute="trailing" id="rOw-mx-Wlw"/>
+                            <constraint firstAttribute="bottom" secondItem="Dre-zQ-1Tj" secondAttribute="bottom" constant="271" id="0Of-3m-3XF"/>
+                            <constraint firstAttribute="trailing" secondItem="Dre-zQ-1Tj" secondAttribute="trailing" constant="174" id="3Oc-db-JbB"/>
+                            <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="5lW-8w-4DP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mjM-ip-I1M" secondAttribute="bottom" constant="251" id="Cbe-Zz-x20"/>
+                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="leading" secondItem="mjM-ip-I1M" secondAttribute="leading" id="D5S-Yo-5le"/>
+                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="top" secondItem="nfQ-Sz-Jhl" secondAttribute="bottom" constant="31" id="J6M-xV-EK0"/>
+                            <constraint firstAttribute="trailing" secondItem="nfQ-Sz-Jhl" secondAttribute="trailing" id="ag3-EF-Z7N"/>
+                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="trailing" secondItem="mjM-ip-I1M" secondAttribute="trailing" id="eI0-ih-hwQ"/>
+                            <constraint firstItem="mjM-ip-I1M" firstAttribute="top" secondItem="R4G-Qf-kSa" secondAttribute="bottom" constant="41" id="gQy-Wn-ZcR"/>
+                            <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="centerX" secondItem="R4G-Qf-kSa" secondAttribute="centerX" id="n2O-3B-SEF"/>
+                            <constraint firstItem="R4G-Qf-kSa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="vBU-qZ-L7T"/>
+                            <constraint firstItem="nfQ-Sz-Jhl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vR4-c2-Mbg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -168,5 +167,6 @@
     <resources>
         <image name="2d2dhomepage.png" width="1189" height="329"/>
         <image name="Ineedaride.png" width="1678" height="369"/>
+        <image name="test.png" width="1678" height="369"/>
     </resources>
 </document>
