@@ -43,22 +43,60 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return countrows
     }
     
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == pick2 {
+            let titleRow = vodkaamount[row]
+            
+            return titleRow
+            
+        }
+            
+        else if pickerView == pick2 {
+            let titleRow = cocktailamount[row]
+            
+            return titleRow
+        }
+        return ""
+    }
     
-    @IBOutlet weak var Button: UIButton!
-    
-    @IBOutlet weak var Label: UILabel!
-    
-    @IBAction func buttonPress(_ sender: Any) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == pick1{
+            self.text1.text = self.vodkaamount[row]
+            self.pick1.isHidden = true
+        }
         
-        Label.text = "yeah dude get medical help"
+        else if pickerView == pick2 {
+            self.text2.text = self.cocktailamount[row]
+            self.pick2.isHidden = true
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if (textField == self.text1) {
+            self.pick1.isHidden = false
+            
+        }
+        else if (textField == self.text2) {
+            self.pick2.isHidden = false
+        
+    }
+    
+    
+    // @IBOutlet weak var Button: UIButton!
+    
+    // @IBOutlet weak var Label: UILabel!
+    
+    // @IBAction func buttonPress(_ sender: Any) {
+        
+       // Label.text = "yeah dude get medical help"
         
         
     }
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // override func viewDidLoad() {
+    //    super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -68,4 +106,4 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     
     
-}
+//}
