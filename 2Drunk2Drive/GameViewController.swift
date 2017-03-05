@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonToPress: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var instructonsLabel: UILabel!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftConstraint: NSLayoutConstraint!
     var timeLeft = 3
@@ -51,6 +52,7 @@ class GameViewController: UIViewController {
         if timeLeft == 0 {
             myTimer.invalidate()
             buttonCall()
+            instructonsLabel.text = ""
             numberLabel.text = ""
         }
         
@@ -66,16 +68,35 @@ class GameViewController: UIViewController {
     }
     
     func randomButton(i: Int) {
-        if (self.buttonCount < 5) {
-            self.reactionTimes[i] = self.miliTime
-            print(self.miliTime)
+        if (self.buttonCount < 6) {
+            if (self.buttonCount != 0) {
+                self.reactionTimes[i - 1] = self.miliTime
+            }
+            //print(self.miliTime)
             self.miliTime = 0
             self.buttonCount += 1
             moveButton(button: buttonToPress)
         } else {
             pressedTimer.invalidate()
             print(reactionTimes)
-            //call something
+            buttonToPress.isHidden = true
+            judgement()
+        }
+    }
+    
+
+    func judgement() {
+        let mean = (reactionTimes[0] + reactionTimes[1] + reactionTimes[2] + reactionTimes[3] + reactionTimes[4]) / 5
+        print(mean)
+        if (mean > 300) {
+            performSegue(withIdentifier: "veryDrunkSegue", sender: nil)
+            print ("v drunk")
+        } else if (mean > 175) {
+            performSegue(withIdentifier: "ishDrunkSegue", sender: nil)
+            print ("not so drunk")
+        } else {
+            performSegue(withIdentifier: "notDrunkSegue", sender: nil)
+            print ("not drunk")
         }
     }
     

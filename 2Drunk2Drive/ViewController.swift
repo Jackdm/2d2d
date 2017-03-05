@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var vodkaamount = ["0 shots","1 shot","2 shots","3 shots","4 shots","5 shots","6 shots","7 shots","8 shots","9 shots","10 shots"]
     var cocktailamount = ["0 cocktails","1 cocktail","2 cocktails","3 cocktails","4 cocktails","5 cocktails","6 cocktails","7 cocktails","8 cocktails","9 cocktails","10 cocktails"]
     var beeramount = ["0 beers", "1 beer","2 beers","3 beers","4 beers","5 beers","6 beers","7 beers","8 beers","9 beers","10 beers"]
-    var wineamount = ["0 glasses" "1 glass","2 glasses","3 glasses","4 glasses","5 glasses","6 glasses","7 glasses","8 glasses","9 glasses","10 glasses"]
+    var wineamount = ["0 glasses", "1 glass","2 glasses","3 glasses","4 glasses","5 glasses","6 glasses","7 glasses","8 glasses","9 glasses","10 glasses"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -93,13 +93,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         
+
         
         
-        
-        
-        
-        
-        
+    
         
         
         
@@ -110,11 +107,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-    @IBAction func calculatePressed(_ sender: Any) {
+  //  @IBAction func calculatePressed(_ sender: Any) {
        // text1.text
     }
     
-}
+// }
     
     
     
