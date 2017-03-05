@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonToPress: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var instructonsLabel: UILabel!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
     @IBOutlet weak var leftConstraint: NSLayoutConstraint!
     var timeLeft = 3
@@ -51,6 +52,7 @@ class GameViewController: UIViewController {
         if timeLeft == 0 {
             myTimer.invalidate()
             buttonCall()
+            instructonsLabel.text = ""
             numberLabel.text = ""
         }
         
@@ -82,6 +84,7 @@ class GameViewController: UIViewController {
         }
     }
     
+
     func judgement() {
         let mean = (reactionTimes[0] + reactionTimes[1] + reactionTimes[2] + reactionTimes[3] + reactionTimes[4]) / 5
         print(mean)
