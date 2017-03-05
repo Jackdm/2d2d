@@ -64,9 +64,9 @@ class GameViewController: UIViewController {
     }
     
     func randomButton(i: Int) {
-        print(buttonCount)
-        if (self.buttonCount < 4) {
+        if (self.buttonCount < 5) {
             self.reactionTimes[i] = self.miliTime
+            print(self.miliTime)
             self.miliTime = 0
             self.buttonCount += 1
             moveButton(button: buttonToPress)
@@ -98,7 +98,6 @@ class GameViewController: UIViewController {
         // Offset the button's center by the random offsets.
         leftConstraint.constant = xoffset + buttonWidth / 2
         topConstraint.constant = yoffset + buttonHeight / 2
-        print(xoffset)
     }
     
     
