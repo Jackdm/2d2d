@@ -9,7 +9,23 @@
 import UIKit
 
 
+
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+    
+    override func viewDidLoad() {
+    super.viewDidLoad()
+    text1.inputView = pick1
+    text2.inputView = pick2
+    text3.inputView = pick3
+    text4.inputView = pick4
+    
+    pick1.removeFromSuperview()
+    pick2.removeFromSuperview()
+    pick3.removeFromSuperview()
+    pick4.removeFromSuperview()
+    }
+    
+    
     
     
     @IBOutlet weak var timeElapsed: UITextField!
