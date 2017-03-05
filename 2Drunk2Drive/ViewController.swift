@@ -48,12 +48,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var Label: UILabel!
     
-    @IBAction func buttonPress(_ sender: Any) {
-        
-        Label.text = "yeah dude get medical help"
-        
-        
-    }
     
     
     
