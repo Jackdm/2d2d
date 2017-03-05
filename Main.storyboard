@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -43,6 +44,7 @@
                             <constraint firstItem="WKE-Dw-oEP" firstAttribute="top" secondItem="V40-8W-lFn" secondAttribute="bottom" constant="8" symbolic="YES" id="tmu-xH-fGa"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esA-xV-JwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +119,7 @@
                             <constraint firstItem="mjM-ip-I1M" firstAttribute="top" secondItem="R4G-Qf-kSa" secondAttribute="bottom" constant="41" id="ocO-do-w34"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="Label" destination="Dre-zQ-1Tj" id="Er8-2N-bYF"/>
                     </connections>
@@ -140,28 +143,30 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVw-RP-q2K">
                                 <rect key="frame" x="16" y="20" width="343" height="639"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="80"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gg-oy-gKx">
                                 <rect key="frame" x="16" y="20" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfA-AP-s0D">
-                                <rect key="frame" x="164" y="244" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.85106438563278519" green="0.97310696830456223" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfA-AP-s0D">
+                                <rect key="frame" x="166" y="233" width="43" height="38"/>
+                                <color key="backgroundColor" red="0.85106438563278519" green="0.97310696830456223" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Fph-w7-b5H"/>
                                     <constraint firstAttribute="width" constant="46" id="ZRj-BD-SAU"/>
+                                    <constraint firstAttribute="height" constant="50" id="sds-Jv-8iY"/>
                                 </constraints>
-                                <state key="normal" title="Click"/>
+                                <state key="normal" title="click" image="gamebutton.png"/>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="BAN-PW-jTX" eventType="touchUpInside" id="ZdG-Rl-rAl"/>
+                                    <action selector="buttonPressed:" destination="BAN-PW-jTX" eventType="touchUpInside" id="0hT-fY-fo2"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.2496207952" blue="0.55227231980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8Gg-oy-gKx" firstAttribute="top" secondItem="UGy-0z-IWx" secondAttribute="bottom" id="7YR-DR-qiv"/>
                             <constraint firstItem="CfA-AP-s0D" firstAttribute="top" secondItem="MVw-RP-q2K" secondAttribute="top" constant="224" id="8hP-Lm-PFN"/>
@@ -174,6 +179,7 @@
                             <constraint firstItem="8Gg-oy-gKx" firstAttribute="top" secondItem="MVw-RP-q2K" secondAttribute="top" id="rI1-wb-bEE"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="buttonToPress" destination="CfA-AP-s0D" id="zKB-dd-tT3"/>
                         <outlet property="leftConstraint" destination="dci-UH-woQ" id="ZZg-nQ-Edc"/>
@@ -184,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcB-yH-R4E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1162" y="-8"/>
+            <point key="canvasLocation" x="1160.8" y="-8.5457271364317844"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zcv-hY-CA1">
@@ -333,6 +339,7 @@
         <image name="Ineedaride.png" width="1678" height="369"/>
         <image name="disclaimer.png" width="1678" height="369"/>
         <image name="disclaimertext.png" width="1334" height="1752"/>
+        <image name="gamebutton.png" width="1500" height="1500"/>
         <image name="test.png" width="1678" height="369"/>
     </resources>
 </document>
