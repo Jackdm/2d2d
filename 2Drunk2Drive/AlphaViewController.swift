@@ -16,7 +16,7 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
     var userInput : String!
     var wrong = 0
     var myTimer : Timer!
-    var time = 3
+    var time = 30
     
 
     var bAlphabet = ["z", "y", "x", "w", "v", "u", "t", "s", "r", "q", "p", "o", "n", "m", "l", "k", "j", "i", "h", "g", "f", "e", "d", "c", "b", "a"]
