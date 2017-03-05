@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,15 +25,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2d2dhomepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="V40-8W-lFn">
                                 <rect key="frame" x="0.0" y="20" width="375" height="123"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="123" id="efa-8d-DPg"/>
+                                    <constraint firstAttribute="height" constant="123" id="5RZ-nH-PbQ"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclaimertext.png" translatesAutoresizingMaskIntoConstraints="NO" id="WKE-Dw-oEP">
                                 <rect key="frame" x="35" y="151" width="305" height="411"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-Ix-WbV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-Ix-WbV">
                                 <rect key="frame" x="16" y="570" width="122" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="jox-zT-KWP"/>
+                                    <constraint firstAttribute="height" constant="77" id="p2n-z7-BhJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="38"/>
                                 <state key="normal" title="&lt;back">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -45,13 +48,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.2496207952" blue="0.55227231980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="V40-8W-lFn" secondAttribute="trailing" id="2cF-cZ-1lM"/>
-                            <constraint firstItem="V40-8W-lFn" firstAttribute="leading" secondItem="NYO-19-SQG" secondAttribute="leading" id="4SG-mm-Hme"/>
-                            <constraint firstItem="V40-8W-lFn" firstAttribute="top" secondItem="qqE-Vl-n0s" secondAttribute="bottom" id="AIR-iM-bXn"/>
-                            <constraint firstItem="rmf-2P-N7D" firstAttribute="top" secondItem="WKE-Dw-oEP" secondAttribute="bottom" constant="105" id="M7h-E2-69z"/>
-                            <constraint firstItem="WKE-Dw-oEP" firstAttribute="leading" secondItem="NYO-19-SQG" secondAttribute="leadingMargin" constant="19" id="dCO-Al-lVF"/>
-                            <constraint firstItem="V40-8W-lFn" firstAttribute="centerX" secondItem="WKE-Dw-oEP" secondAttribute="centerX" id="juo-5e-bdb"/>
-                            <constraint firstItem="WKE-Dw-oEP" firstAttribute="top" secondItem="V40-8W-lFn" secondAttribute="bottom" constant="8" symbolic="YES" id="tmu-xH-fGa"/>
+                            <constraint firstItem="NQx-Ix-WbV" firstAttribute="leading" secondItem="NYO-19-SQG" secondAttribute="leadingMargin" id="7MP-yE-xeB"/>
+                            <constraint firstItem="V40-8W-lFn" firstAttribute="leading" secondItem="NYO-19-SQG" secondAttribute="leading" id="DSG-0R-H96"/>
+                            <constraint firstItem="WKE-Dw-oEP" firstAttribute="top" secondItem="V40-8W-lFn" secondAttribute="bottom" constant="8" symbolic="YES" id="Kui-Lt-maC"/>
+                            <constraint firstItem="V40-8W-lFn" firstAttribute="centerX" secondItem="WKE-Dw-oEP" secondAttribute="centerX" id="Kym-ei-IEh"/>
+                            <constraint firstItem="NQx-Ix-WbV" firstAttribute="top" secondItem="WKE-Dw-oEP" secondAttribute="bottom" constant="8" symbolic="YES" id="MXJ-36-te3"/>
+                            <constraint firstItem="WKE-Dw-oEP" firstAttribute="leading" secondItem="NYO-19-SQG" secondAttribute="leadingMargin" constant="19" id="fGK-A1-aOu"/>
+                            <constraint firstAttribute="trailing" secondItem="V40-8W-lFn" secondAttribute="trailing" id="ix7-hf-DsY"/>
+                            <constraint firstItem="V40-8W-lFn" firstAttribute="top" secondItem="qqE-Vl-n0s" secondAttribute="bottom" id="le7-5y-NU7"/>
+                            <constraint firstAttribute="bottom" secondItem="NQx-Ix-WbV" secondAttribute="bottom" constant="20" symbolic="YES" id="pdW-gM-Kok"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
