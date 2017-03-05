@@ -13,13 +13,17 @@ class GameViewController: UIViewController {
     //load a button at a random place, start milisecond timer
     //if clicks, button appears at another random place
     //repeat 5 times
+    @IBAction func buttonPressed(_ sender: Any) {
+    }
     //variables
+    @IBOutlet weak var buttonToPress: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     var timeLeft = 3
     var miliTime = 0
     var myTimer : Timer!
     var pressedTimer : Timer!
+    var reactionTimes = [0, 0, 0, 0, 0]
     
     //functions
     override func viewDidLoad() {
@@ -45,6 +49,10 @@ class GameViewController: UIViewController {
         pressedTimer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { _ in
             self.miliTime += 1
             self.timerLabel.text = String(self.miliTime)
+            if self.buttonToPress.isTouchInside {
+                self.reactionTimes[0] = self.miliTime
+                self.pressedTimer.invalidate()
+            }
         }
     }
     /*
