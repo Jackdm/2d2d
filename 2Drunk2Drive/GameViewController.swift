@@ -46,6 +46,7 @@ class GameViewController: UIViewController {
     }
     
     func randomButton() {
+        moveButton(button: buttonToPress)
         pressedTimer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { _ in
             self.miliTime += 1
             self.timerLabel.text = String(self.miliTime)
@@ -54,6 +55,28 @@ class GameViewController: UIViewController {
                 self.pressedTimer.invalidate()
             }
         }
+    }
+    
+    @IBAction func moveButton(button: UIButton) {
+        // Find the button's width and height
+        let buttonWidth = button.frame.width
+        let buttonHeight = button.frame.height
+        
+        // Find the width and height of the enclosing view
+        let viewWidth = button.superview!.bounds.width
+        let viewHeight = button.superview!.bounds.height
+        
+        // Compute width and height of the area to contain the button's center
+        let xwidth = viewWidth - buttonWidth
+        let yheight = viewHeight - buttonHeight
+        
+        // Generate a random x and y offset
+        let xoffset = CGFloat(arc4random_uniform(UInt32(xwidth)))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(yheight)))
+        
+        // Offset the button's center by the random offsets.
+        button.center.x = xoffset + buttonWidth / 2
+        button.center.y = yoffset + buttonHeight / 2
     }
     /*
     // MARK: - Navigation
