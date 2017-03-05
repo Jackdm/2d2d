@@ -80,6 +80,56 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.pick2.isHidden = false
         
     }
+        
+        //
+        
+        
+        
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            var countrows: Int = beeramount.count
+            if pickerView == pick4 {
+                countrows = self.wineamount.count
+            }
+            return countrows
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            if pickerView == pick4 {
+                let titleRow = beeramount[row]
+                
+                return titleRow
+                
+            }
+                
+            else if pickerView == pick4 {
+                let titleRow = wineamount[row]
+                
+                return titleRow
+            }
+            return ""
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            if pickerView == pick3{
+                self.text3.text = self.beeramount[row]
+                self.pick3.isHidden = true
+            }
+                
+            else if pickerView == pick4 {
+                self.text4.text = self.wineamount[row]
+                self.pick4.isHidden = true
+            }
+        }
+        
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            if (textField == self.text3) {
+                self.pick3.isHidden = false
+                
+            }
+            else if (textField == self.text4) {
+                self.pick4.isHidden = false
+                
+            }
     
     
     // @IBOutlet weak var Button: UIButton!
