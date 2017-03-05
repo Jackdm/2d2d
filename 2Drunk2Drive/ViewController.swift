@@ -13,16 +13,20 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     override func viewDidLoad() {
-    super.viewDidLoad()
-    text1.inputView = pick1
-    text2.inputView = pick2
-    text3.inputView = pick3
-    text4.inputView = pick4
-    
-    pick1.removeFromSuperview()
-    pick2.removeFromSuperview()
-    pick3.removeFromSuperview()
-    pick4.removeFromSuperview()
+        super.viewDidLoad()
+        text1.inputView = pick1
+        text2.inputView = pick2
+        text3.inputView = pick3
+        text4.inputView = pick4
+        
+        weight.text=""
+        
+        weight.placeholder="weight"
+        
+        pick1.removeFromSuperview()
+        pick2.removeFromSuperview()
+        pick3.removeFromSuperview()
+        pick4.removeFromSuperview()
     }
     
     @IBOutlet weak var weight: UITextField!
@@ -51,10 +55,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var text4: UITextField!
     @IBOutlet weak var pick4: UIPickerView!
     
-    var vodkaamount = ["0 shots","1 shot","2 shots","3 shots","4 shots","5 shots","6 shots","7 shots","8 shots","9 shots","10 shots"]
-    var cocktailamount = ["0 cocktails","1 cocktail","2 cocktails","3 cocktails","4 cocktails","5 cocktails","6 cocktails","7 cocktails","8 cocktails","9 cocktails","10 cocktails"]
-    var beeramount = ["0 beers", "1 beer","2 beers","3 beers","4 beers","5 beers","6 beers","7 beers","8 beers","9 beers","10 beers"]
-    var wineamount = ["0 glasses", "1 glass","2 glasses","3 glasses","4 glasses","5 glasses","6 glasses","7 glasses","8 glasses","9 glasses","10 glasses"]
+    var vodkaamount = ["0","1","2","3","4","5","6","7","8","9","10"]
+    var cocktailamount = ["0","1","2","3","4","5","6","7","8","9","10"]
+    var beeramount = ["0", "1","2","3","4","5","6","7","8","9","10"]
+    var wineamount = ["0", "1","2","3","4","5","6","7","8","9","10"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -95,7 +99,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.text1.text = self.vodkaamount[row]
             self.pick1.isHidden = true
         }
-        
+            
         else if pickerView == pick2 {
             self.text2.text = self.cocktailamount[row]
             self.pick2.isHidden = true
@@ -124,20 +128,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         
-    
+        
         
     }
     
     
-@IBAction func calculatePressed(_ sender: Any) {
-    let bloodAlc1 = Float(text1.text!)!*14.0
-    let bloodAlc2 = Float(text2.text!)!*15.0
-    let bloodAlc3 = Float(text3.text!)!*17.7
-    let bloodAlc4 = Float(text4.text!)!*14.0
-    let bloodAlcT = bloodAlc1+bloodAlc2+bloodAlc3+bloodAlc4
-   let div = Float(weight.text!)!*453.0*0.615*100.0
-alcResult.text = String(bloodAlcT/div)
-    
-    
+    @IBAction func calculatePressed(_ sender: Any) {
+        let bloodAlc1 = Float(text1.text!)!*14.0
+        let bloodAlc2 = Float(text2.text!)!*15.0
+        let bloodAlc3 = Float(text3.text!)!*17.7
+        let bloodAlc4 = Float(text4.text!)!*14.0
+        let bloodAlcT = bloodAlc1+bloodAlc2+bloodAlc3+bloodAlc4
+        let div = Float(weight.text!)!*453.0*0.615*100.0
+        alcResult.text = String(bloodAlcT/div)
+        
+        
     }
 }
