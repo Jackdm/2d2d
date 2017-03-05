@@ -66,16 +66,31 @@ class GameViewController: UIViewController {
     }
     
     func randomButton(i: Int) {
-        if (self.buttonCount < 5) {
-            self.reactionTimes[i] = self.miliTime
-            print(self.miliTime)
+        if (self.buttonCount < 6) {
+            if (self.buttonCount != 0) {
+                self.reactionTimes[i - 1] = self.miliTime
+            }
+            //print(self.miliTime)
             self.miliTime = 0
             self.buttonCount += 1
             moveButton(button: buttonToPress)
         } else {
             pressedTimer.invalidate()
             print(reactionTimes)
-            //call something
+            buttonToPress.isHidden = true
+            judgement()
+        }
+    }
+    
+    func judgement() {
+        let mean = (reactionTimes[0] + reactionTimes[1] + reactionTimes[2] + reactionTimes[3] + reactionTimes[4]) / 5
+        print(mean)
+        if (mean > 1500) {
+            print ("v drunk")
+        } else if (mean > 700) {
+            print ("not so drunk")
+        } else {
+            print ("not drunk")
         }
     }
     
