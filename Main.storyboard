@@ -28,6 +28,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="2d2dhomepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-Sz-Jhl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="6KM-GV-w4d"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjM-ip-I1M">
                                 <rect key="frame" x="140" y="424" width="95" height="30"/>
                                 <constraints>
@@ -38,16 +44,10 @@
                                     <segue destination="BAN-PW-jTX" kind="show" id="mro-nd-Y1Z"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ineedaride.png" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-Qf-kSa">
-                                <rect key="frame" x="42" y="205" width="290" height="87"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Ineedaride.png" translatesAutoresizingMaskIntoConstraints="NO" id="R4G-Qf-kSa">
+                                <rect key="frame" x="42" y="198" width="290" height="87"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="87" id="WPe-kS-qEG"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2d2dhomepage.png" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-Sz-Jhl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="139"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="139" id="6KM-GV-w4d"/>
                                 </constraints>
                             </imageView>
                         </subviews>
