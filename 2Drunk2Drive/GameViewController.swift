@@ -86,10 +86,13 @@ class GameViewController: UIViewController {
         let mean = (reactionTimes[0] + reactionTimes[1] + reactionTimes[2] + reactionTimes[3] + reactionTimes[4]) / 5
         print(mean)
         if (mean > 1500) {
+            performSegue(withIdentifier: "veryDrunkSegue", sender: nil)
             print ("v drunk")
         } else if (mean > 700) {
+            performSegue(withIdentifier: "ishDrunkSegue", sender: nil)
             print ("not so drunk")
         } else {
+            performSegue(withIdentifier: "notDrunkSegue", sender: nil)
             print ("not drunk")
         }
     }
