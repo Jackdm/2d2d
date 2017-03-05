@@ -26,10 +26,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var text4: UITextField!
     @IBOutlet weak var pick4: UIPickerView!
     
-    var vodkaamount = ["1","2","3","4","5","6","7","8","9","10"]
-    var cocktailamount = ["1","2","3","4","5","6","7","8","9","10"]
-    var beeramount = ["1","2","3","4","5","6","7","8","9","10"]
-    var wineamount = ["1","2","3","4","5","6","7","8","9","10"]
+    var vodkaamount = ["0 shots","1 shot","2 shots","3 shots","4 shots","5 shots","6 shots","7 shots","8 shots","9 shots","10 shots"]
+    var cocktailamount = ["0 cocktails","1 cocktail","2 cocktails","3 cocktails","4 cocktails","5 cocktails","6 cocktails","7 cocktails","8 cocktails","9 cocktails","10 cocktails"]
+    var beeramount = ["0 beers", "1 beer","2 beers","3 beers","4 beers","5 beers","6 beers","7 beers","8 beers","9 beers","10 beers"]
+    var wineamount = ["0 glasses" "1 glass","2 glasses","3 glasses","4 glasses","5 glasses","6 glasses","7 glasses","8 glasses","9 glasses","10 glasses"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -69,69 +69,31 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             self.text2.text = self.cocktailamount[row]
             self.pick2.isHidden = true
         }
+        else if pickerView == pick3 {
+            self.text3.text = self.beeramount[row]
+            self.pick3.isHidden = true
+        } else {
+            self.text4.text = self.wineamount[row]
+            self.pick4.isHidden = true
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if (textField == self.text1) {
             self.pick1.isHidden = false
-            
         }
         else if (textField == self.text2) {
             self.pick2.isHidden = false
-        
-    }
-        
-        //
-        
-        
-        
-        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-            var countrows: Int = beeramount.count
-            if pickerView == pick4 {
-                countrows = self.wineamount.count
-            }
-            return countrows
+        }
+        else if (textField == self.text3) {
+            self.pick3.isHidden = false
+        } else {
+            self.pick4.isHidden = false
+            
         }
         
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            if pickerView == pick4 {
-                let titleRow = beeramount[row]
-                
-                return titleRow
-                
-            }
-                
-            else if pickerView == pick4 {
-                let titleRow = wineamount[row]
-                
-                return titleRow
-            }
-            return ""
-        }
         
-        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-            if pickerView == pick3{
-                self.text3.text = self.beeramount[row]
-                self.pick3.isHidden = true
-            }
-                
-            else if pickerView == pick4 {
-                self.text4.text = self.wineamount[row]
-                self.pick4.isHidden = true
-            }
-        }
         
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            if (textField == self.text3) {
-                self.pick3.isHidden = false
-                
-            }
-            else if (textField == self.text4) {
-                self.pick4.isHidden = false
-                
-            }
-    
-    
     // @IBOutlet weak var Button: UIButton!
     
     // @IBOutlet weak var Label: UILabel!
@@ -143,6 +105,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
+    @IBAction func calculatePressed(_ sender: Any) {
+       // text1.text
+    }
     
     
     // override func viewDidLoad() {
