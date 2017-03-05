@@ -32,6 +32,8 @@ class GameViewController: UIViewController {
     var newButtonY: CGFloat?
     var buttonCount = 0
     
+    var score : Int!
+    
     //functions
     override func viewDidLoad() {
         buttonToPress.isHidden = true

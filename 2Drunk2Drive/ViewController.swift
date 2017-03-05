@@ -43,13 +43,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return countrows
     }
     
-    func 
     
+   @IBOutlet weak var Button: UIButton!
     
-    
-    @IBOutlet weak var Button: UIButton!
-    
-    @IBOutlet weak var Label: UILabel!
+   @IBOutlet weak var Label: UILabel!
     
     @IBAction func buttonPress(_ sender: Any) {
         
