@@ -43,8 +43,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return countrows
     }
     
-    func 
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == pick2 {
+            let titleRow = vodkaamount[row]
+            
+            return titleRow
+            
+        }
+        
+        else if pickerView == pick2 {
+            let titleRow = cocktailamount[row]
+            
+            return titleRow
+        }
+        return ""
+    }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickView == pick1{
+            
+        }
+    }
     
     
     @IBOutlet weak var Button: UIButton!
