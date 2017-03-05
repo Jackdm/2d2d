@@ -12,6 +12,14 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     
+    @IBOutlet weak var timeElapsed: UITextField!
+    @IBOutlet weak var height: UITextField!
+    @IBOutlet weak var weight: UITextField!
+    
+    
+    
+    
+    
     @IBOutlet weak var text1: UITextField!
     @IBOutlet weak var pick1: UIPickerView!
     
@@ -99,7 +107,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         
-        
+    
         
     }
     
