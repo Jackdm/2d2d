@@ -34,6 +34,7 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
         time -= 1
         timerLabel.text = "\(String(time))"
         if (time <= 0) {
+            zyxTextField.isUserInteractionEnabled = false
             myTimer.invalidate()
             continueButton.isHidden = false
             compareToAlphabet()
@@ -50,19 +51,21 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
        for i in 0...25 {
         if (userInput == nil) {
             wrong += 26
+            break
         }
         else if (userInput.characters.count <= i) {
             wrong += (26 - i)
+            break
         } else {
             let index = userInput.index(userInput.startIndex, offsetBy: i)
-            print(index)
             let userChar = userInput[index]
             if (bAlphabet[i] != String(userChar)) {
                 wrong += 1
                 }
             }
         }
-        print(wrong)
+        print("wrong:\(wrong)")
+        judgement()
         
     }
     
@@ -74,6 +77,7 @@ class AlphaViewController: UIViewController, UITextFieldDelegate {
         } else {
             score = 0
         }
+        print("firstScore:\(score)")
     }
     /*
     // MARK: - Navigation

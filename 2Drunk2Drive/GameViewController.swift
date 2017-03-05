@@ -42,9 +42,9 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         myTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameViewController.countUp), userInfo: nil, repeats: true)
         
-        if score2 == nil {
+        /*if score2 == nil {
             score2 = 0
-        }
+        }*/
         
         // Do any additional setup after loading the view.
     }
@@ -98,10 +98,11 @@ class GameViewController: UIViewController {
         } else {
             score2! += 0
         }
+        toPages()
     }
     
     func toPages() {
-        print (score2)
+        print("SecondScore:\(score2)")
         if score2 > 4 {
             performSegue(withIdentifier: "veryDrunkSegue", sender: nil)
         } else if score2 > 1 {
