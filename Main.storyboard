@@ -157,7 +157,7 @@
                                 </constraints>
                                 <state key="normal" title="Click"/>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="BAN-PW-jTX" eventType="touchUpInside" id="ZdG-Rl-rAl"/>
+                                    <action selector="buttonPressed:" destination="BAN-PW-jTX" eventType="touchUpInside" id="0hT-fY-fo2"/>
                                 </connections>
                             </button>
                         </subviews>
