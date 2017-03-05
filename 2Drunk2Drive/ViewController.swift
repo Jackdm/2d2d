@@ -39,21 +39,27 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         var countrows: Int = vodkaamount.count
         if pickerView == pick2 {
             countrows = self.cocktailamount.count
+        } else if pickerView == pick3{
+            countrows = self.beeramount.count
+        } else if pickerView == pick4{
+            countrows = self.wineamount.count
         }
         return countrows
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == pick2 {
+        if pickerView == pick1 {
             let titleRow = vodkaamount[row]
-            
             return titleRow
-            
         }
-            
         else if pickerView == pick2 {
             let titleRow = cocktailamount[row]
-            
+            return titleRow
+        } else if pickerView == pick3 {
+            let titleRow = beeramount[row]
+            return titleRow
+        } else {
+            let titleRow = wineamount[row]
             return titleRow
         }
         return ""
@@ -93,16 +99,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
         
-
-        
-        
-    
-        
-        
-        
-        
-        
-
         
         
     }
