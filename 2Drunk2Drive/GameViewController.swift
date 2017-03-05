@@ -14,7 +14,9 @@ class GameViewController: UIViewController {
     //if clicks, button appears at another random place
     //repeat 5 times
     @IBAction func buttonPressed(_ sender: Any) {
+        randomButton(i: buttonCount)
     }
+    
     //variables
     @IBOutlet weak var buttonToPress: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
@@ -28,6 +30,7 @@ class GameViewController: UIViewController {
     var reactionTimes = [0, 0, 0, 0, 0]
     var newButtonX: CGFloat?
     var newButtonY: CGFloat?
+    var buttonCount = 0
     
     //functions
     override func viewDidLoad() {
@@ -45,23 +48,32 @@ class GameViewController: UIViewController {
         numberLabel.text = "\(timeLeft)"
         if timeLeft == 0 {
             myTimer.invalidate()
-            randomButton()
+            buttonCall()
             numberLabel.text = ""
         }
         
     }
     
-    func randomButton() {
+    func buttonCall() {
         buttonToPress.isHidden = false
-        moveButton(button: buttonToPress)
         pressedTimer = Timer.scheduledTimer(withTimeInterval: 0.001, repeats: true) { _ in
             self.miliTime += 1
             self.timerLabel.text = String(self.miliTime)
-            if self.buttonToPress.isTouchInside {
-                self.reactionTimes[0] = self.miliTime
-                self.pressedTimer.invalidate()
-                //self.miliTime = 0
-            }
+        }
+        randomButton(i: buttonCount)
+    }
+    
+    func randomButton(i: Int) {
+        if (self.buttonCount < 5) {
+            self.reactionTimes[i] = self.miliTime
+            print(self.miliTime)
+            self.miliTime = 0
+            self.buttonCount += 1
+            moveButton(button: buttonToPress)
+        } else {
+            pressedTimer.invalidate()
+            print(reactionTimes)
+            //call something
         }
     }
     
@@ -69,6 +81,7 @@ class GameViewController: UIViewController {
         // Find the button's width and height
         let buttonWidth = button.frame.width
         let buttonHeight = button.frame.height
+        
         
         // Find the width and height of the enclosing view
         let viewWidth = button.superview!.bounds.width
