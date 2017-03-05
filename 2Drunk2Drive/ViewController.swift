@@ -25,14 +25,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     pick4.removeFromSuperview()
     }
     
-    
-    
-    
-    @IBOutlet weak var timeElapsed: UITextField!
-    @IBOutlet weak var height: UITextField!
     @IBOutlet weak var weight: UITextField!
+    @IBOutlet weak var alcResult: UILabel!
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if Float(textField.text!) == nil {
+            return false
+        }
+        return true
+    }
     
     
     
@@ -127,23 +128,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
     }
     
-  //  @IBAction func calculatePressed(_ sender: Any) {
-       // text1.text
+    
+@IBAction func calculatePressed(_ sender: Any) {
+    let bloodAlc1 = Float(text1.text!)!*14.0
+    let bloodAlc2 = Float(text2.text!)!*15.0
+    let bloodAlc3 = Float(text3.text!)!*17.7
+    let bloodAlc4 = Float(text4.text!)!*14.0
+    let bloodAlcT = bloodAlc1+bloodAlc2+bloodAlc3+bloodAlc4
+   let div = Float(weight.text!)!*453.0*0.615*100.0
+alcResult.text = String(bloodAlcT/div)
+    
+    
     }
-    
-// }
-    
-    
-    
-//}
-// @IBOutlet weak var Button: UIButton!
-
-// @IBOutlet weak var Label: UILabel!
-
-// @IBAction func buttonPress(_ sender: Any) {
-
-// Label.text = "yeah dude get medical help"
-// override func viewDidLoad() {
-//    super.viewDidLoad()
-// Do any additional setup after loading the view, typically from a nib.
-        
+}
