@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -495,6 +495,7 @@
                         <color key="backgroundColor" red="0.0" green="0.2496207952" blue="0.55227231980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="height" destination="pNa-VA-I8i" id="iHd-BW-MdE"/>
                         <outlet property="pick1" destination="AlL-mb-e42" id="xE6-uP-tTg"/>
                         <outlet property="pick2" destination="huP-7S-R2E" id="hyH-6T-olX"/>
                         <outlet property="pick3" destination="5kU-g6-MjQ" id="tWK-Mg-9Pu"/>
@@ -503,6 +504,8 @@
                         <outlet property="text2" destination="Q0a-wC-Kob" id="dKp-Pq-8lg"/>
                         <outlet property="text3" destination="g2T-Oz-aLw" id="lnO-ws-Lnk"/>
                         <outlet property="text4" destination="DRg-yE-fSf" id="oTU-yR-j79"/>
+                        <outlet property="timeElapsed" destination="7Dd-gv-aUo" id="ORW-Gk-yHa"/>
+                        <outlet property="weight" destination="wKj-dU-Z9f" id="K8c-7I-pXN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKE-3R-RtC" userLabel="First Responder" sceneMemberID="firstResponder"/>
