@@ -94,13 +94,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         
         
-    // @IBOutlet weak var Button: UIButton!
-    
-    // @IBOutlet weak var Label: UILabel!
-    
-    // @IBAction func buttonPress(_ sender: Any) {
         
-       // Label.text = "yeah dude get medical help"
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
         
         
     }
@@ -109,16 +114,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
        // text1.text
     }
     
-    
-    // override func viewDidLoad() {
-    //    super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
-        
-    }
+}
     
     
     
 //}
+// @IBOutlet weak var Button: UIButton!
+
+// @IBOutlet weak var Label: UILabel!
+
+// @IBAction func buttonPress(_ sender: Any) {
+
+// Label.text = "yeah dude get medical help"
+// override func viewDidLoad() {
+//    super.viewDidLoad()
+// Do any additional setup after loading the view, typically from a nib.
+        
