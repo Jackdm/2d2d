@@ -43,7 +43,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return countrows
     }
     
-    func pickerVi
     
     
     
