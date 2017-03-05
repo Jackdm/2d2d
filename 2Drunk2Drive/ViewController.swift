@@ -25,12 +25,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var text4: UITextField!
     @IBOutlet weak var pick4: UIPickerView!
-
+    
     var vodkaamount = ["1","2","3","4","5","6","7","8","9","10"]
     var cocktailamount = ["1","2","3","4","5","6","7","8","9","10"]
     var beeramount = ["1","2","3","4","5","6","7","8","9","10"]
     var wineamount = ["1","2","3","4","5","6","7","8","9","10"]
-
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -41,28 +41,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             countrows = self.cocktailamount.count
         }
         return countrows
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == pick2 {
-            let titleRow = vodkaamount[row]
-            
-            return titleRow
-            
-        }
-        
-        else if pickerView == pick2 {
-            let titleRow = cocktailamount[row]
-            
-            return titleRow
-        }
-        return ""
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickView == pick1{
-            
-        }
     }
     
     
@@ -76,19 +54,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         
     }
-
-  
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         
-       
-            
-        }
         
-  
-
+        
+    }
+    
+    
+    
 }
-
